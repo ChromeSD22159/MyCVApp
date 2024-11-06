@@ -7,12 +7,14 @@
 import SwiftUI
 
 #Preview {
-    HeadProtraitCard(margin: 10)
+    ScrollView {
+        HeadProtraitCard(margin: 10)
+    }
 }
 
 struct HeadProtraitCard: View {
-    let name: String = "Frederik Kohler"
-    let subline: String = "iOS & Android Developer"
+    let name: String = "Frederik Kohler "
+    let subline: String = "- iOS & Android Developer \n- Full-Stack Web Developer\n- Mediengestalter Digital und Print"
     let image: UIImage = .appPortrait
     let margin: CGFloat
     var body: some View {
@@ -35,6 +37,7 @@ struct HeadProtraitCard: View {
             .background {
                 RoundedRectangle(cornerSize: CGSize(width: 10, height: 10))
                     .fill(Theme.linearGradient)
+                    .shadow(radius: 10, x: 5, y: 5)
             }
         }
         .padding(margin)
