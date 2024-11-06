@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CVStation {
+struct CVStation: Equatable {
     let title: String
     let from: Date
     let till: Date

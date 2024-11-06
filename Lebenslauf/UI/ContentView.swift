@@ -21,7 +21,8 @@ struct ContentView: View {
                     .animation(.easeInOut(duration: 0.4), value: bgOffset)
                     .animation(.easeInOut(duration: 0.8), value: bgBlur)
                     .animation(.easeInOut(duration: 0.8), value: bgOpacity)
-            }.ignoresSafeArea()
+            }
+            .ignoresSafeArea()
             
             HStack {
                 Image(.appLogo)
@@ -34,7 +35,7 @@ struct ContentView: View {
             }
             .padding(.horizontal, 40)
             
-            DebugScrollView(show: true)
+            DebugScrollView(show: false)
             
             AnimatedScrollView(
                 scrollViewMarginTop: 80,
@@ -53,27 +54,21 @@ struct ContentView: View {
                     }
                 },
                 content: {
-                    VStack {
+                    VStack(spacing: 30) {
                         HeadProtraitCard(margin: 30)
+    
+                        Accordion(
+                            headerText: "Werdegang:",
+                            list: professionalBackground
+                        )
                         
-                        HStack {
-                            Text("Schulisch:")
-                            Spacer()
-                        }.padding(.horizontal, 30)
-                        ForEach(school, id: \.title) { school in
-                            Station(item: school)
-                        }.padding(.horizontal, 30)
-                        
-                        HStack {
-                            Text("Schulisch:")
-                            Spacer()
-                        }.padding(.horizontal, 30)
-                        
-                        ForEach(professionalBackground, id: \.title) { background in
-                            Station(item: background)
-                        }.padding(.horizontal, 30)
+                        Accordion(
+                            headerText: "Schulisch:",
+                            list: school
+                        )
                         
                     }
+                    .foregroundStyle(Theme.primaryTextColor)
                     .padding(.horizontal, Theme.padding)
                 }
             )
@@ -106,29 +101,68 @@ struct ContentView: View {
             .ignoresSafeArea()
         }
     }
+}
+
+struct Accordion: View {
+    let headerText: String
+    let list: [CVStation]
     
-    @ViewBuilder func Station(item: CVStation) -> some View {
-        VStack(alignment: .leading) {
+    @State var isListShown = false
+    
+    @State var printedList: [CVStation] = []
+    
+    @Namespace private var namespace
+    
+    var body: some View {
+        VStack {
             HStack {
-                Text(item.title)
-                    .fontWeight(.bold)
+                Text(headerText)
+                    .textCase(.uppercase)
+                    .font(.footnote)
+                    .padding(.leading, 5)
                 
                 Spacer()
                 
-                let from = formateDateMMYY(date: item.from)
-                let till = formateDateMMYY(date: item.till)
-                Text("\(from) - \(till)")
-                    .font(.subheadline)
-            }
+                Image(systemName: "chevron.right")
+                    .rotationEffect(Angle(degrees: isListShown ? 90 : 0))
+                    .animation(.easeInOut, value: isListShown)
+                    .onTapGesture { toggleCollapse() }
+            }.padding(.horizontal, 30)
             
-            Text(item.description)
-                .font(.footnote)
+            ForEach(printedList, id: \.title) { item in
+                ZStack {
+                    Station(item: item)
+                        .matchedGeometryEffect(id: item.title, in: namespace)
+                }
+                .transition(.opacity)
+                .animation(.easeInOut(duration: 0.8), value: printedList)
+             
+            }
+            .padding(.horizontal, 30)
         }
-        .padding(Theme.padding)
-        .background(
-            RoundedRectangle(cornerRadius: Theme.padding)
-                .fill(Material.ultraThinMaterial)
-        )
+    }
+    
+    private func toggleCollapse() {
+        isListShown.toggle()
+        if isListShown {
+            printedList.removeAll() // Initialisiere die Liste immer sauber
+            
+            for (index, item) in list.enumerated() {
+                let delay = 0.1 * Double(index) // 0.05 Sekunden Verzögerung für jedes Element
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
+                    let found = printedList.contains(where: {
+                        $0.title == item.title
+                    })
+                    
+                    if !found {
+                        printedList.append(item)
+                    }
+                }
+            }
+        } else {
+            printedList.removeAll()
+        }
     }
 }
  

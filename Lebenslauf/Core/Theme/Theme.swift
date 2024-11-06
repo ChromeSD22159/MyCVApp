@@ -21,6 +21,8 @@ class Theme {
     // Font Color
     static var onBackground: Color = Color.white
     
+    static var primaryTextColor: Color = Color(.fkPrimaryText) 
+    
     static var linearGradient: LinearGradient = LinearGradient(colors: [
         Theme.secondary,
         Theme.primary

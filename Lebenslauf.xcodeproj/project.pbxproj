@@ -11,6 +11,7 @@
 		B6123E7E2CDB9BAB007CBC7D /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6123E7C2CDB9BAB007CBC7D /* Repository.swift */; };
 		B6123E802CDB9BB4007CBC7D /* formateDateMMYY.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6123E7F2CDB9BB3007CBC7D /* formateDateMMYY.swift */; };
 		B6123E822CDB9BBD007CBC7D /* sleep.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6123E812CDB9BBC007CBC7D /* sleep.swift */; };
+		B6123E842CDB9CC3007CBC7D /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6123E832CDB9CC2007CBC7D /* Station.swift */; };
 		B6E69CE02CDB5D5000EC3BE2 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E69CDF2CDB5D4700EC3BE2 /* Theme.swift */; };
 		B6E69CE62CDB659800EC3BE2 /* subline.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E69CE52CDB659500EC3BE2 /* subline.swift */; };
 		B6E69CEA2CDB65CF00EC3BE2 /* ViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E69CE82CDB65CF00EC3BE2 /* ViewExtention.swift */; };
@@ -28,6 +29,7 @@
 		B6123E7C2CDB9BAB007CBC7D /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		B6123E7F2CDB9BB3007CBC7D /* formateDateMMYY.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = formateDateMMYY.swift; sourceTree = "<group>"; };
 		B6123E812CDB9BBC007CBC7D /* sleep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sleep.swift; sourceTree = "<group>"; };
+		B6123E832CDB9CC2007CBC7D /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
 		B6E69CDF2CDB5D4700EC3BE2 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		B6E69CE52CDB659500EC3BE2 /* subline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = subline.swift; sourceTree = "<group>"; };
 		B6E69CE82CDB65CF00EC3BE2 /* ViewExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtention.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 		B6E69CDC2CDB5D1D00EC3BE2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B6123E762CDB9689007CBC7D /* CVStation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -99,7 +102,6 @@
 		B6E69CDD2CDB5D2200EC3BE2 /* Enum */ = {
 			isa = PBXGroup;
 			children = (
-				B6123E762CDB9689007CBC7D /* CVStation.swift */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
@@ -125,6 +127,7 @@
 		B6E69CEB2CDB65E600EC3BE2 /* Componts */ = {
 			isa = PBXGroup;
 			children = (
+				B6123E832CDB9CC2007CBC7D /* Station.swift */,
 				B6E69CEE2CDB6EC100EC3BE2 /* ScrollViewOffsetTracker.swift */,
 				B6E69CEC2CDB6EA400EC3BE2 /* AnimatedScrollView.swift */,
 				B6E69CE52CDB659500EC3BE2 /* subline.swift */,
@@ -244,6 +247,7 @@
 				B6E69CE02CDB5D5000EC3BE2 /* Theme.swift in Sources */,
 				B6E69CE62CDB659800EC3BE2 /* subline.swift in Sources */,
 				B6E69CF12CDB6EF300EC3BE2 /* ScrollViewExtention.swift in Sources */,
+				B6123E842CDB9CC3007CBC7D /* Station.swift in Sources */,
 				B6123E772CDB968A007CBC7D /* CVStation.swift in Sources */,
 				CE75F1F12C8B1427001AD0A3 /* ContentView.swift in Sources */,
 				B6123E7E2CDB9BAB007CBC7D /* Repository.swift in Sources */,
