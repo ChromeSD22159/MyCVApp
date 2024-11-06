@@ -28,7 +28,7 @@ struct ContentView: View {
             
             AppLogo(logoOpacity: logoOpacity)
             
-            DebugScrollView(show: true, scrollOffset: scrollOffset)
+            //DebugScrollView(show: true, scrollOffset: scrollOffset)
             
             AnimatedScrollView(
                 scrollViewMarginTop: 80,

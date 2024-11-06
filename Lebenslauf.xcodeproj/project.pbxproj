@@ -22,6 +22,7 @@
 		B6123E952CDC07EC007CBC7D /* TechStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6123E942CDC07EB007CBC7D /* TechStack.swift */; };
 		B6123E972CDC0F81007CBC7D /* AppLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6123E962CDC0F80007CBC7D /* AppLogo.swift */; };
 		B6123E992CDC0FF2007CBC7D /* CircleBG.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6123E982CDC0FF1007CBC7D /* CircleBG.swift */; };
+		B6123E9A2CDC1088007CBC7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE75F1F22C8B1428001AD0A3 /* Assets.xcassets */; };
 		B6E69CE02CDB5D5000EC3BE2 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E69CDF2CDB5D4700EC3BE2 /* Theme.swift */; };
 		B6E69CE62CDB659800EC3BE2 /* subline.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E69CE52CDB659500EC3BE2 /* subline.swift */; };
 		B6E69CEA2CDB65CF00EC3BE2 /* ViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E69CE82CDB65CF00EC3BE2 /* ViewExtention.swift */; };
@@ -30,8 +31,6 @@
 		B6E69CF12CDB6EF300EC3BE2 /* ScrollViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E69CF02CDB6EEA00EC3BE2 /* ScrollViewExtention.swift */; };
 		CE75F1EF2C8B1427001AD0A3 /* LebenslaufApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE75F1EE2C8B1427001AD0A3 /* LebenslaufApp.swift */; };
 		CE75F1F12C8B1427001AD0A3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE75F1F02C8B1427001AD0A3 /* ContentView.swift */; };
-		CE75F1F32C8B1428001AD0A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE75F1F22C8B1428001AD0A3 /* Assets.xcassets */; };
-		CE75F1F62C8B1428001AD0A3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE75F1F52C8B1428001AD0A3 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,7 +59,6 @@
 		CE75F1EE2C8B1427001AD0A3 /* LebenslaufApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LebenslaufApp.swift; sourceTree = "<group>"; };
 		CE75F1F02C8B1427001AD0A3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CE75F1F22C8B1428001AD0A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CE75F1F52C8B1428001AD0A3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +83,7 @@
 		B6E69CD92CDB5D0B00EC3BE2 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				CE75F1F22C8B1428001AD0A3 /* Assets.xcassets */,
 				B6123E7D2CDB9BAB007CBC7D /* Repository */,
 				B6E69CE92CDB65CF00EC3BE2 /* Extentions */,
 				B6E69CDC2CDB5D1D00EC3BE2 /* Model */,
@@ -180,18 +179,8 @@
 				B6E69CDB2CDB5D1600EC3BE2 /* UI */,
 				B6E69CD92CDB5D0B00EC3BE2 /* Core */,
 				CE75F1EE2C8B1427001AD0A3 /* LebenslaufApp.swift */,
-				CE75F1F22C8B1428001AD0A3 /* Assets.xcassets */,
-				CE75F1F42C8B1428001AD0A3 /* Preview Content */,
 			);
 			path = Lebenslauf;
-			sourceTree = "<group>";
-		};
-		CE75F1F42C8B1428001AD0A3 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				CE75F1F52C8B1428001AD0A3 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,8 +241,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE75F1F62C8B1428001AD0A3 /* Preview Assets.xcassets in Resources */,
-				CE75F1F32C8B1428001AD0A3 /* Assets.xcassets in Resources */,
+				B6123E9A2CDC1088007CBC7D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,7 +407,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Lebenslauf/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = ZD275Y62U7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
