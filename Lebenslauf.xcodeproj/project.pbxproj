@@ -18,6 +18,10 @@
 		B6123E8C2CDC013F007CBC7D /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6123E8B2CDC013E007CBC7D /* RoundedButton.swift */; };
 		B6123E8E2CDC01A1007CBC7D /* DebugScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6123E8D2CDC01A0007CBC7D /* DebugScrollView.swift */; };
 		B6123E912CDC036B007CBC7D /* ContactScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6123E902CDC0310007CBC7D /* ContactScrollView.swift */; };
+		B6123E932CDC07E5007CBC7D /* MediaDesignSkills.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6123E922CDC07E4007CBC7D /* MediaDesignSkills.swift */; };
+		B6123E952CDC07EC007CBC7D /* TechStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6123E942CDC07EB007CBC7D /* TechStack.swift */; };
+		B6123E972CDC0F81007CBC7D /* AppLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6123E962CDC0F80007CBC7D /* AppLogo.swift */; };
+		B6123E992CDC0FF2007CBC7D /* CircleBG.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6123E982CDC0FF1007CBC7D /* CircleBG.swift */; };
 		B6E69CE02CDB5D5000EC3BE2 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E69CDF2CDB5D4700EC3BE2 /* Theme.swift */; };
 		B6E69CE62CDB659800EC3BE2 /* subline.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E69CE52CDB659500EC3BE2 /* subline.swift */; };
 		B6E69CEA2CDB65CF00EC3BE2 /* ViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E69CE82CDB65CF00EC3BE2 /* ViewExtention.swift */; };
@@ -42,6 +46,10 @@
 		B6123E8B2CDC013E007CBC7D /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		B6123E8D2CDC01A0007CBC7D /* DebugScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugScrollView.swift; sourceTree = "<group>"; };
 		B6123E902CDC0310007CBC7D /* ContactScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactScrollView.swift; sourceTree = "<group>"; };
+		B6123E922CDC07E4007CBC7D /* MediaDesignSkills.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaDesignSkills.swift; sourceTree = "<group>"; };
+		B6123E942CDC07EB007CBC7D /* TechStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechStack.swift; sourceTree = "<group>"; };
+		B6123E962CDC0F80007CBC7D /* AppLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLogo.swift; sourceTree = "<group>"; };
+		B6123E982CDC0FF1007CBC7D /* CircleBG.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleBG.swift; sourceTree = "<group>"; };
 		B6E69CDF2CDB5D4700EC3BE2 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		B6E69CE52CDB659500EC3BE2 /* subline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = subline.swift; sourceTree = "<group>"; };
 		B6E69CE82CDB65CF00EC3BE2 /* ViewExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtention.swift; sourceTree = "<group>"; };
@@ -107,6 +115,8 @@
 			children = (
 				B6123E762CDB9689007CBC7D /* CVStation.swift */,
 				B6123E852CDC00CA007CBC7D /* SocialButton.swift */,
+				B6123E942CDC07EB007CBC7D /* TechStack.swift */,
+				B6123E922CDC07E4007CBC7D /* MediaDesignSkills.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -134,8 +144,10 @@
 		B6E69CEB2CDB65E600EC3BE2 /* Componts */ = {
 			isa = PBXGroup;
 			children = (
+				B6123E962CDC0F80007CBC7D /* AppLogo.swift */,
 				B6123E892CDC0126007CBC7D /* Accordion.swift */,
 				B6123E8B2CDC013E007CBC7D /* RoundedButton.swift */,
+				B6123E982CDC0FF1007CBC7D /* CircleBG.swift */,
 				B6123E832CDB9CC2007CBC7D /* Station.swift */,
 				B6123E902CDC0310007CBC7D /* ContactScrollView.swift */,
 				B6E69CEE2CDB6EC100EC3BE2 /* ScrollViewOffsetTracker.swift */,
@@ -254,6 +266,7 @@
 			files = (
 				B6123E912CDC036B007CBC7D /* ContactScrollView.swift in Sources */,
 				B6E69CED2CDB6EA500EC3BE2 /* AnimatedScrollView.swift in Sources */,
+				B6123E972CDC0F81007CBC7D /* AppLogo.swift in Sources */,
 				B6E69CEF2CDB6EC300EC3BE2 /* ScrollViewOffsetTracker.swift in Sources */,
 				B6E69CE02CDB5D5000EC3BE2 /* Theme.swift in Sources */,
 				B6123E882CDC010A007CBC7D /* openURL.swift in Sources */,
@@ -266,11 +279,14 @@
 				B6123E7E2CDB9BAB007CBC7D /* Repository.swift in Sources */,
 				CE75F1EF2C8B1427001AD0A3 /* LebenslaufApp.swift in Sources */,
 				B6123E8C2CDC013F007CBC7D /* RoundedButton.swift in Sources */,
+				B6123E952CDC07EC007CBC7D /* TechStack.swift in Sources */,
+				B6123E932CDC07E5007CBC7D /* MediaDesignSkills.swift in Sources */,
 				B6123E802CDB9BB4007CBC7D /* formateDateMMYY.swift in Sources */,
 				B6123E8A2CDC0127007CBC7D /* Accordion.swift in Sources */,
 				B6123E862CDC00CC007CBC7D /* SocialButton.swift in Sources */,
 				B6E69CEA2CDB65CF00EC3BE2 /* ViewExtention.swift in Sources */,
 				B6123E822CDB9BBD007CBC7D /* sleep.swift in Sources */,
+				B6123E992CDC0FF2007CBC7D /* CircleBG.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

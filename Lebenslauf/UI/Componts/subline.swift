@@ -13,8 +13,8 @@ import SwiftUI
 }
 
 struct HeadProtraitCard: View {
-    let name: String = "Frederik Kohler"
-    let subline: String = "iOS & Android Developer"
+    let name: String = "Frederik Kohler "
+    let subline: String = "- iOS & Android Developer \n- Full-Stack Web Developer\n- Mediengestalter Digital und Print"
     let image: UIImage = .appPortrait
     let margin: CGFloat
     var body: some View {

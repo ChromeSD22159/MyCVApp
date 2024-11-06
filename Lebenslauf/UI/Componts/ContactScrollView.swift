@@ -6,6 +6,14 @@
 //
 import SwiftUI
 
+#Preview {
+    ContactScrollView(
+        title: "String",
+        subTitle: "String",
+        socials: []
+    )
+}
+
 struct ContactScrollView: View {
     let title: String
     let subTitle: String
@@ -13,7 +21,9 @@ struct ContactScrollView: View {
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
-                Text(title).padding(.leading, 5)
+                Text(title)
+                    .fontWeight(.semibold)
+                    .padding(.leading, 5)
                 Spacer()
             }
             HStack {

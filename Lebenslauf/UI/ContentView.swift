@@ -24,28 +24,9 @@ struct ContentView: View {
     var body: some View {
         ZStack(alignment: .top) {
             
-            ZStack {
-                Image(.appCircleBG)
-                    .offset(y: bgOffset ? -10 : -300)
-                    .blur(radius: bgBlur ? 0 : 4)
-                    .opacity(bgOpacity ? 1.0 : 0.25)
-                    .animation(.easeInOut(duration: 0.4), value: bgOffset)
-                    .animation(.easeInOut(duration: 0.8), value: bgBlur)
-                    .animation(.easeInOut(duration: 0.8), value: bgOpacity)
-            }
-            .ignoresSafeArea()
+            CircleBG(bgOffset: bgOffset, bgBlur: bgBlur, bgOpacity: bgOpacity)
             
-            HStack {
-                Image(.appLogo)
-                    .resizable()
-                    .opacity(logoOpacity)
-                    .frame(width: 70, height: 70)
-                    .padding(.trailing, 10)
-                
-                
-                Spacer()
-            }
-            .padding(.horizontal, 40)
+            AppLogo(logoOpacity: logoOpacity)
             
             DebugScrollView(show: true, scrollOffset: scrollOffset)
             
@@ -98,8 +79,6 @@ struct ContentView: View {
     }
 }
 
-
- 
 #Preview {
     ContentView()
 }

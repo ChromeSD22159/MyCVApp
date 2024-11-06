@@ -28,5 +28,9 @@ class Repository {
     ]
     
     static let socials: [SocialButton] = SocialButton.allCases
+    
+    static let mediaDesignSkills: [MediaDesignSkills] = MediaDesignSkills.allCases
+    
+    static let techStack: [TechStack] = TechStack.allCases
 }
 
