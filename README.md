@@ -14,5 +14,5 @@ Die App dient nicht nur als digitales Portfolio, sondern auch als Inspiration f√
 ## App Design
 <p>
     <img src="./images/dark.PNG" width="200">
-    <img src="./images/light" width="200">
+    <img src="./images/light.PNG" width="200">
 </p>
