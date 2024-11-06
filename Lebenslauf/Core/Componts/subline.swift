@@ -7,7 +7,9 @@
 import SwiftUI
 
 #Preview {
-    HeadProtraitCard(margin: 10)
+    ScrollView {
+        HeadProtraitCard(margin: 10)
+    }
 }
 
 struct HeadProtraitCard: View {
@@ -35,6 +37,7 @@ struct HeadProtraitCard: View {
             .background {
                 RoundedRectangle(cornerSize: CGSize(width: 10, height: 10))
                     .fill(Theme.linearGradient)
+                    .shadow(radius: 10, x: 5, y: 5)
             }
         }
         .padding(margin)

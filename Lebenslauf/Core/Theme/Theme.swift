@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-class Theme {
+class Theme { 
     
     static var padding: CGFloat = 10
     
