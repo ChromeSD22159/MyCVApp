@@ -7,9 +7,20 @@ struct ContentView: View {
     @State var bgBlur = false
     @State var bgOpacity = false
     
+    var logoOpacity: CGFloat {
+        let minOffset: CGFloat = -20
+        let maxOffset: CGFloat = 10
+
+        // Begrenze scrollOffset.y innerhalb des Bereichs von minOffset bis maxOffset
+        let clampedOffset = max(min(scrollOffset.y, maxOffset), minOffset)
+
+        // Normalisiere clampedOffset auf einen Wert zwischen 0.0 und 1.0
+        return (clampedOffset - minOffset) / (maxOffset - minOffset)
+    }
+    
     @State var school: [CVStation] = []
     @State var professionalBackground: [CVStation] = []
-    
+    @State var socials: [SocialButton] = []
     var body: some View {
         ZStack(alignment: .top) {
             
@@ -27,6 +38,7 @@ struct ContentView: View {
             HStack {
                 Image(.appLogo)
                     .resizable()
+                    .opacity(logoOpacity)
                     .frame(width: 70, height: 70)
                     .padding(.trailing, 10)
                 
@@ -35,7 +47,7 @@ struct ContentView: View {
             }
             .padding(.horizontal, 40)
             
-            DebugScrollView(show: false)
+            DebugScrollView(show: true, scrollOffset: scrollOffset)
             
             AnimatedScrollView(
                 scrollViewMarginTop: 80,
@@ -57,42 +69,11 @@ struct ContentView: View {
                     VStack(spacing: 30) {
                         HeadProtraitCard(margin: 30)
     
-                        VStack(alignment: .leading) {
-                            HStack {
-                                Text("Kontakt").padding(.leading, 5)
-                                Spacer()
-                            }
-                            HStack {
-                                Text("Sag einfach mal Hallo!")
-                                    .textCase(.uppercase)
-                                    .font(.footnote)
-                                    .padding(.leading, 5)
-                                Spacer()
-                            }
-                        }.padding(.horizontal, 30)
-                        
-                        ScrollView(.horizontal, showsIndicators: false) {
-                            HStack {
-                                RoundedButton(icon: .remove) {
-                                    
-                                }
-                                
-                                RoundedButton(icon: .remove) {
-                                    
-                                }
-                                
-                                RoundedButton(icon: .remove) {
-                                    
-                                }
-                                
-                                RoundedButton(icon: .remove) {
-                                    
-                                }
-                            }
-                        }
-                        .contentMargins(.leading, 30)
-                        .contentMargins(.trailing, 30)
-                            
+                        ContactScrollView(
+                            title: "Kontakt",
+                            subTitle: "Sag einfach mal Hallo!",
+                            socials: socials
+                        )
                         
                         Accordion(
                             headerText: "Werdegang:",
@@ -103,7 +84,6 @@ struct ContentView: View {
                             headerText: "Schulisch:",
                             list: school
                         )
-                        
                     }
                     .foregroundStyle(Theme.primaryTextColor)
                     .padding(.horizontal, Theme.padding)
@@ -113,125 +93,12 @@ struct ContentView: View {
         .onAppear {
             school = Repository.schoolEducation
             professionalBackground = Repository.professionalBackground
-        }
-    }
-    
-    @ViewBuilder func DebugScrollView(show: Bool = false) -> some View {
-        if show {
-            HStack {
-                Spacer()
-                
-                VStack(alignment: .leading) {
-                    Text("ScrollOffset")
-                    
-                    HStack {
-                        Text(String(format: "X: %.0f", scrollOffset.x)).frame(minWidth: 20)
-                        Text(String(format: "Y: %.0f", scrollOffset.y)).frame(minWidth: 20)
-                    }
-                     
-                }
-                .foregroundStyle(Theme.onBackground)
-                .font(.footnote)
-            }
-            .padding(.top, 10)
-            .padding(.trailing, 50)
-            .ignoresSafeArea()
+            socials = Repository.socials
         }
     }
 }
 
-struct Accordion: View {
-    let headerText: String
-    let list: [CVStation]
-    
-    @State var isListShown: Bool = false
-    
-    @State var printedList: [CVStation] = []
-    
-    @Namespace private var namespace
-    
-    init(headerText: String, list: [CVStation]) {
-        self.headerText = headerText
-        self.list = list
-    }
-    
-    var body: some View {
-        VStack {
-            HStack {
-                Text(headerText)
-                    .textCase(.uppercase)
-                    .font(.footnote)
-                    .padding(.leading, 5)
-                
-                Spacer()
-                
-                Image(systemName: "chevron.right")
-                    .rotationEffect(Angle(degrees: isListShown ? 90 : 0))
-                    .animation(.easeInOut, value: isListShown)
-                    .onTapGesture { toggleCollapse() }
-                    .padding(.trailing, 5)
-            }.padding(.horizontal, 30)
-            
-            ForEach(printedList, id: \.title) { item in
-                ZStack {
-                    Station(item: item)
-                        .matchedGeometryEffect(id: item.title, in: namespace)
-                }
-                .transition(.opacity)
-                .animation(.easeInOut(duration: 0.8), value: printedList)
-             
-            }
-            .padding(.horizontal, 30)
-        }
-        .onAppear {
-            
-        }
-    }
-    
-    private func toggleCollapse() {
-        isListShown.toggle()
-        if isListShown {
-            printedList.removeAll() // Initialisiere die Liste immer sauber
-            
-            for (index, item) in list.enumerated() {
-                let delay = 0.1 * Double(index) // 0.05 Sekunden Verzögerung für jedes Element
-                
-                DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
-                    let found = printedList.contains(where: {
-                        $0.title == item.title
-                    })
-                    
-                    if !found {
-                        printedList.append(item)
-                    }
-                }
-            }
-        } else {
-            printedList.removeAll()
-        }
-    }
-}
 
-struct RoundedButton: View {
-    var icon: UIImage = .appLogo
-    var onClick: () -> ()
-    var body: some View {
-        ZStack {
-            Circle()
-                .fill(Theme.linearGradient)
-                .stroke(Theme.borderGradient, lineWidth: 10)
-                
-            
-            Image(uiImage: icon)
-                .resizable()
-                //.background(.red)
-                .frame(width: 50, height: 50)
-        }
-        .onTapGesture { onClick() }
-        .padding(10)
-        .frame(width: 100, height: 100)
-    }
-}
  
 #Preview {
     ContentView()

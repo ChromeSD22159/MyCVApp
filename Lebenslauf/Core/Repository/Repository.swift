@@ -26,5 +26,7 @@ class Repository {
         CVStation(title: "Schichtverantwortlicher", from: Date(timeIntervalSince1970: 1235865600), till: Date(timeIntervalSince1970: 1338508800), description: "Schichtverantwortlicher bei Subway A. Kiback, Waldshut. Schichtverantwortung, Inventur, Waren-Management"),
         CVStation(title: "Lagermitarbeiter", from: Date(timeIntervalSince1970: 1072915200), till: Date(timeIntervalSince1970: 1222819200), description: "Lagermitarbeiter bei Obi GmbH, Waldshut. Warenannahme, Wareneingang und Lager-Management")
     ]
+    
+    static let socials: [SocialButton] = SocialButton.allCases
 }
 

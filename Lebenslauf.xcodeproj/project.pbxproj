@@ -12,6 +12,12 @@
 		B6123E802CDB9BB4007CBC7D /* formateDateMMYY.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6123E7F2CDB9BB3007CBC7D /* formateDateMMYY.swift */; };
 		B6123E822CDB9BBD007CBC7D /* sleep.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6123E812CDB9BBC007CBC7D /* sleep.swift */; };
 		B6123E842CDB9CC3007CBC7D /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6123E832CDB9CC2007CBC7D /* Station.swift */; };
+		B6123E862CDC00CC007CBC7D /* SocialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6123E852CDC00CA007CBC7D /* SocialButton.swift */; };
+		B6123E882CDC010A007CBC7D /* openURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6123E872CDC0109007CBC7D /* openURL.swift */; };
+		B6123E8A2CDC0127007CBC7D /* Accordion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6123E892CDC0126007CBC7D /* Accordion.swift */; };
+		B6123E8C2CDC013F007CBC7D /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6123E8B2CDC013E007CBC7D /* RoundedButton.swift */; };
+		B6123E8E2CDC01A1007CBC7D /* DebugScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6123E8D2CDC01A0007CBC7D /* DebugScrollView.swift */; };
+		B6123E912CDC036B007CBC7D /* ContactScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6123E902CDC0310007CBC7D /* ContactScrollView.swift */; };
 		B6E69CE02CDB5D5000EC3BE2 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E69CDF2CDB5D4700EC3BE2 /* Theme.swift */; };
 		B6E69CE62CDB659800EC3BE2 /* subline.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E69CE52CDB659500EC3BE2 /* subline.swift */; };
 		B6E69CEA2CDB65CF00EC3BE2 /* ViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E69CE82CDB65CF00EC3BE2 /* ViewExtention.swift */; };
@@ -30,6 +36,12 @@
 		B6123E7F2CDB9BB3007CBC7D /* formateDateMMYY.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = formateDateMMYY.swift; sourceTree = "<group>"; };
 		B6123E812CDB9BBC007CBC7D /* sleep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sleep.swift; sourceTree = "<group>"; };
 		B6123E832CDB9CC2007CBC7D /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
+		B6123E852CDC00CA007CBC7D /* SocialButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialButton.swift; sourceTree = "<group>"; };
+		B6123E872CDC0109007CBC7D /* openURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = openURL.swift; sourceTree = "<group>"; };
+		B6123E892CDC0126007CBC7D /* Accordion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accordion.swift; sourceTree = "<group>"; };
+		B6123E8B2CDC013E007CBC7D /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		B6123E8D2CDC01A0007CBC7D /* DebugScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugScrollView.swift; sourceTree = "<group>"; };
+		B6123E902CDC0310007CBC7D /* ContactScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactScrollView.swift; sourceTree = "<group>"; };
 		B6E69CDF2CDB5D4700EC3BE2 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		B6E69CE52CDB659500EC3BE2 /* subline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = subline.swift; sourceTree = "<group>"; };
 		B6E69CE82CDB65CF00EC3BE2 /* ViewExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtention.swift; sourceTree = "<group>"; };
@@ -66,9 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				B6123E7D2CDB9BAB007CBC7D /* Repository */,
-				B6E69CEB2CDB65E600EC3BE2 /* Componts */,
 				B6E69CE92CDB65CF00EC3BE2 /* Extentions */,
-				B6E69CDD2CDB5D2200EC3BE2 /* Enum */,
 				B6E69CDC2CDB5D1D00EC3BE2 /* Model */,
 				B6E69CDA2CDB5D1200EC3BE2 /* Theme */,
 			);
@@ -86,6 +96,7 @@
 		B6E69CDB2CDB5D1600EC3BE2 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				B6E69CEB2CDB65E600EC3BE2 /* Componts */,
 				CE75F1F02C8B1427001AD0A3 /* ContentView.swift */,
 			);
 			path = UI;
@@ -95,21 +106,17 @@
 			isa = PBXGroup;
 			children = (
 				B6123E762CDB9689007CBC7D /* CVStation.swift */,
+				B6123E852CDC00CA007CBC7D /* SocialButton.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		B6E69CDD2CDB5D2200EC3BE2 /* Enum */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Enum;
 			sourceTree = "<group>";
 		};
 		B6E69CDE2CDB5D3500EC3BE2 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				B6123E8D2CDC01A0007CBC7D /* DebugScrollView.swift */,
 				B6123E812CDB9BBC007CBC7D /* sleep.swift */,
+				B6123E872CDC0109007CBC7D /* openURL.swift */,
 				B6123E7F2CDB9BB3007CBC7D /* formateDateMMYY.swift */,
 			);
 			path = Utils;
@@ -127,7 +134,10 @@
 		B6E69CEB2CDB65E600EC3BE2 /* Componts */ = {
 			isa = PBXGroup;
 			children = (
+				B6123E892CDC0126007CBC7D /* Accordion.swift */,
+				B6123E8B2CDC013E007CBC7D /* RoundedButton.swift */,
 				B6123E832CDB9CC2007CBC7D /* Station.swift */,
+				B6123E902CDC0310007CBC7D /* ContactScrollView.swift */,
 				B6E69CEE2CDB6EC100EC3BE2 /* ScrollViewOffsetTracker.swift */,
 				B6E69CEC2CDB6EA400EC3BE2 /* AnimatedScrollView.swift */,
 				B6E69CE52CDB659500EC3BE2 /* subline.swift */,
@@ -242,17 +252,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6123E912CDC036B007CBC7D /* ContactScrollView.swift in Sources */,
 				B6E69CED2CDB6EA500EC3BE2 /* AnimatedScrollView.swift in Sources */,
 				B6E69CEF2CDB6EC300EC3BE2 /* ScrollViewOffsetTracker.swift in Sources */,
 				B6E69CE02CDB5D5000EC3BE2 /* Theme.swift in Sources */,
+				B6123E882CDC010A007CBC7D /* openURL.swift in Sources */,
 				B6E69CE62CDB659800EC3BE2 /* subline.swift in Sources */,
+				B6123E8E2CDC01A1007CBC7D /* DebugScrollView.swift in Sources */,
 				B6E69CF12CDB6EF300EC3BE2 /* ScrollViewExtention.swift in Sources */,
 				B6123E842CDB9CC3007CBC7D /* Station.swift in Sources */,
 				B6123E772CDB968A007CBC7D /* CVStation.swift in Sources */,
 				CE75F1F12C8B1427001AD0A3 /* ContentView.swift in Sources */,
 				B6123E7E2CDB9BAB007CBC7D /* Repository.swift in Sources */,
 				CE75F1EF2C8B1427001AD0A3 /* LebenslaufApp.swift in Sources */,
+				B6123E8C2CDC013F007CBC7D /* RoundedButton.swift in Sources */,
 				B6123E802CDB9BB4007CBC7D /* formateDateMMYY.swift in Sources */,
+				B6123E8A2CDC0127007CBC7D /* Accordion.swift in Sources */,
+				B6123E862CDC00CC007CBC7D /* SocialButton.swift in Sources */,
 				B6E69CEA2CDB65CF00EC3BE2 /* ViewExtention.swift in Sources */,
 				B6123E822CDB9BBD007CBC7D /* sleep.swift in Sources */,
 			);
