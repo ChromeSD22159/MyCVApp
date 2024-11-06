@@ -27,4 +27,9 @@ class Theme {
         Theme.secondary,
         Theme.primary
     ], startPoint: .topTrailing, endPoint: .bottomLeading)
+    
+    static var borderGradient: LinearGradient = LinearGradient(colors: [
+        Theme.primary,
+        Theme.secondary
+    ], startPoint: .topTrailing, endPoint: .bottomLeading)
 }

@@ -57,6 +57,43 @@ struct ContentView: View {
                     VStack(spacing: 30) {
                         HeadProtraitCard(margin: 30)
     
+                        VStack(alignment: .leading) {
+                            HStack {
+                                Text("Kontakt").padding(.leading, 5)
+                                Spacer()
+                            }
+                            HStack {
+                                Text("Sag einfach mal Hallo!")
+                                    .textCase(.uppercase)
+                                    .font(.footnote)
+                                    .padding(.leading, 5)
+                                Spacer()
+                            }
+                        }.padding(.horizontal, 30)
+                        
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack {
+                                RoundedButton(icon: .remove) {
+                                    
+                                }
+                                
+                                RoundedButton(icon: .remove) {
+                                    
+                                }
+                                
+                                RoundedButton(icon: .remove) {
+                                    
+                                }
+                                
+                                RoundedButton(icon: .remove) {
+                                    
+                                }
+                            }
+                        }
+                        .contentMargins(.leading, 30)
+                        .contentMargins(.trailing, 30)
+                            
+                        
                         Accordion(
                             headerText: "Werdegang:",
                             list: professionalBackground
@@ -107,11 +144,16 @@ struct Accordion: View {
     let headerText: String
     let list: [CVStation]
     
-    @State var isListShown = false
+    @State var isListShown: Bool = false
     
     @State var printedList: [CVStation] = []
     
     @Namespace private var namespace
+    
+    init(headerText: String, list: [CVStation]) {
+        self.headerText = headerText
+        self.list = list
+    }
     
     var body: some View {
         VStack {
@@ -127,6 +169,7 @@ struct Accordion: View {
                     .rotationEffect(Angle(degrees: isListShown ? 90 : 0))
                     .animation(.easeInOut, value: isListShown)
                     .onTapGesture { toggleCollapse() }
+                    .padding(.trailing, 5)
             }.padding(.horizontal, 30)
             
             ForEach(printedList, id: \.title) { item in
@@ -139,6 +182,9 @@ struct Accordion: View {
              
             }
             .padding(.horizontal, 30)
+        }
+        .onAppear {
+            
         }
     }
     
@@ -163,6 +209,27 @@ struct Accordion: View {
         } else {
             printedList.removeAll()
         }
+    }
+}
+
+struct RoundedButton: View {
+    var icon: UIImage = .appLogo
+    var onClick: () -> ()
+    var body: some View {
+        ZStack {
+            Circle()
+                .fill(Theme.linearGradient)
+                .stroke(Theme.borderGradient, lineWidth: 10)
+                
+            
+            Image(uiImage: icon)
+                .resizable()
+                //.background(.red)
+                .frame(width: 50, height: 50)
+        }
+        .onTapGesture { onClick() }
+        .padding(10)
+        .frame(width: 100, height: 100)
     }
 }
  
