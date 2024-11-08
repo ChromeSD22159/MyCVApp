@@ -10,8 +10,8 @@ import Foundation
 class Repository {
     
     static let schoolEducation: [CVStation] = [
-        CVStation(title: "Theodor-Heuss Schulen", from: Date(timeIntervalSince1970: 1104537600), till: Date(timeIntervalSince1970: 1230768000), description: "Grundschule & Mittlere Reife, D-Waldshut-Tiengen"),
-        CVStation(title: "Justus-von-Liebig Schulen", from: Date(timeIntervalSince1970: 1233446400), till: Date(timeIntervalSince1970: 1264982400), description: "Einjährige Berufsfachschule Mediengestalter Digital und Print, D-Waldshut-Tiengen"),
+        CVStation(title: "Theodor-Heuss Schule", from: Date(timeIntervalSince1970: 1104537600), till: Date(timeIntervalSince1970: 1230768000), description: "Grundschule & Mittlere Reife, D-Waldshut-Tiengen"),
+        CVStation(title: "Justus-von-Liebig Schule", from: Date(timeIntervalSince1970: 1233446400), till: Date(timeIntervalSince1970: 1264982400), description: "Einjährige Berufsfachschule Mediengestalter Digital und Print, D-Waldshut-Tiengen"),
         CVStation(title: "BFW Hamburg", from: Date(timeIntervalSince1970: 1577836800), till: Date(timeIntervalSince1970: 1577836800), description: "IHK Abschluss Mediengestalter Digital und Print, Hamburg"),
         CVStation(title: "Syntax Institut", from: Date(timeIntervalSince1970: 1704067200), till: Date(timeIntervalSince1970: 1748640000), description: "Mobile App Developer Weiterbildung, Berlin")
     ]
