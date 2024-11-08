@@ -6,6 +6,10 @@
 //
 import SwiftUI
 
+#Preview {
+    Accordion(headerText: "String", list: Repository.schoolEducation)
+}
+
 struct Accordion: View {
     let headerText: String
     let list: [CVStation]
@@ -48,9 +52,6 @@ struct Accordion: View {
              
             }
             .padding(.horizontal, 30)
-        }
-        .onAppear {
-            
         }
     }
     

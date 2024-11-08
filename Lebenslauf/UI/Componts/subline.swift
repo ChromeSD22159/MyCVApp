@@ -36,7 +36,7 @@ struct HeadProtraitCard: View {
             .padding(Theme.padding * 3)
             .background {
                 RoundedRectangle(cornerSize: CGSize(width: 10, height: 10))
-                    .fill(Theme.linearGradient)
+                    .fill(Theme.cardBorderGradient)
                     .shadow(radius: 10, x: 5, y: 5)
             }
         }

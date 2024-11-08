@@ -6,14 +6,18 @@
 //
 import SwiftUI
 
+#Preview {
+    RoundedButton(onClick: {})
+}
+
 struct RoundedButton: View {
     var icon: UIImage = .appLogo
     var onClick: () -> ()
     var body: some View {
         ZStack {
             Circle()
-                .fill(Theme.linearGradient)
-                .stroke(Theme.borderGradient, lineWidth: 10)
+                .fill(Theme.borderGradient)
+                .stroke(Theme.cardBorderGradient, lineWidth: 7)
                 
             
             Image(uiImage: icon)
